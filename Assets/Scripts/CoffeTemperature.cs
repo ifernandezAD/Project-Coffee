@@ -14,6 +14,7 @@ public class CoffeTemperature : MonoBehaviour
     public ParticleSystem lightSmoke;
 
     public static event Action burning;
+    public static event Action freezing;
 
     void Update()
     {
@@ -52,6 +53,7 @@ public class CoffeTemperature : MonoBehaviour
         else if (coffeeTemperature < coldLimitTemperature)
         {
             // ... do this.
+            freezing?.Invoke();
             print("Coffee is too cold.");
         }
         // If it is neither of those then...
