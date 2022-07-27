@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoffeTemperature : MonoBehaviour
 {
-    float coffeeTemperature = 85.0f;
+    float coffeeTemperature = 100.0f;
     float hotLimitTemperature = 70.0f;
     float coldLimitTemperature = 40.0f;
 
+    public Text myText;
 
     void Update()
     {
@@ -16,6 +18,7 @@ public class CoffeTemperature : MonoBehaviour
 
         coffeeTemperature -= Time.deltaTime * 5f;
 
+        myText.text = "Temperature: " + coffeeTemperature;
     }
 
 
