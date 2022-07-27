@@ -15,6 +15,7 @@ public class CoffeTemperature : MonoBehaviour
 
     public static event Action burning;
     public static event Action freezing;
+    public static event Action winning;
 
     void Update()
     {
@@ -60,6 +61,7 @@ public class CoffeTemperature : MonoBehaviour
         else
         {
             // ... do this.
+            winning?.Invoke();
             print("Coffee is just right.");
         }
     }
