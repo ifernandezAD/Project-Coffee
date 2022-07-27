@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 public class CoffeTemperature : MonoBehaviour
 {
@@ -10,11 +10,11 @@ public class CoffeTemperature : MonoBehaviour
     float coldLimitTemperature = 30.0f;
 
     public Text myText;
-
     public ParticleSystem smoke;
     public ParticleSystem lightSmoke;
 
- 
+    public static event Action burning;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -26,7 +26,7 @@ public class CoffeTemperature : MonoBehaviour
         {
             smoke.Stop();
         }
-        
+
         if (coffeeTemperature <= 70)
         {
             lightSmoke.Stop();
@@ -44,7 +44,9 @@ public class CoffeTemperature : MonoBehaviour
         if (coffeeTemperature > hotLimitTemperature)
         {
             // ... do this.
+            burning?.Invoke();
             print("Coffee is too hot.");
+
         }
         // If it isn't, but the coffee temperature is less than the coldest drinking temperature...
         else if (coffeeTemperature < coldLimitTemperature)
