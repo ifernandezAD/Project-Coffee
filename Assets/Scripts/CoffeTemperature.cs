@@ -5,16 +5,32 @@ using UnityEngine.UI;
 
 public class CoffeTemperature : MonoBehaviour
 {
-    float coffeeTemperature = 100.0f;
-    float hotLimitTemperature = 70.0f;
-    float coldLimitTemperature = 40.0f;
+    float coffeeTemperature = 130.0f;
+    float hotLimitTemperature = 80.0f;
+    float coldLimitTemperature = 30.0f;
 
     public Text myText;
 
+    public ParticleSystem smoke;
+    public ParticleSystem lightSmoke;
+
+ 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             TemperatureTest();
+        }
+
+        if (coffeeTemperature <= 85)
+        {
+            smoke.Stop();
+        }
+        
+        if (coffeeTemperature <= 70)
+        {
+            lightSmoke.Stop();
+        }
 
         coffeeTemperature -= Time.deltaTime * 5f;
 

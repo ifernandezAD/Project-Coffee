@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!198 &669367569 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3376392282535930835, guid: 590f141de6444e6438fc7604e9bebf06, type: 3}
+  m_PrefabInstance: {fileID: 728579561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +228,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047421286}
     m_Modifications:
+    - target: {fileID: 3376392282535930835, guid: 590f141de6444e6438fc7604e9bebf06, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6170223009838602677, guid: 590f141de6444e6438fc7604e9bebf06, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -544,6 +553,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb4e8fecceca5044abdcdc6a59a08f0e, type: 3}
+--- !u!198 &1121525874 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4199124637666738853, guid: 3b1d68e6fcdc6064cb970cfd46d3f492, type: 3}
+  m_PrefabInstance: {fileID: 1594241225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1323550298
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myText: {fileID: 1586406293}
+  smoke: {fileID: 1121525874}
+  lightSmoke: {fileID: 669367569}
 --- !u!4 &1323550300
 Transform:
   m_ObjectHideFlags: 0
@@ -776,6 +792,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047421286}
     m_Modifications:
+    - target: {fileID: 4199124637666738853, guid: 3b1d68e6fcdc6064cb970cfd46d3f492, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4700661087786512579, guid: 3b1d68e6fcdc6064cb970cfd46d3f492, type: 3}
       propertyPath: m_RootOrder
       value: 0
