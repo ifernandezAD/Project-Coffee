@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FreezeControl : MonoBehaviour
 {
@@ -19,7 +20,15 @@ public class FreezeControl : MonoBehaviour
 
     public void FreezeEffect()
     {
-        myAnimator.SetTrigger("freezing");
+        StartCoroutine("ColdScene");
     }
 
+    IEnumerator ColdScene()
+    {
+        myAnimator.SetTrigger("freezing");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(3);
+    }
 }
+
+

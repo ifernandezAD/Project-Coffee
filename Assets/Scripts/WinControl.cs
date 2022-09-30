@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinControl : MonoBehaviour
 {
@@ -14,10 +15,18 @@ public class WinControl : MonoBehaviour
     public void OnEnable()
     {
         CoffeTemperature.winning += WinEffect;
+        
     }
 
     public void WinEffect()
+    {     
+        StartCoroutine("PerfectScene");
+    }
+
+    IEnumerator PerfectScene()
     {
         myAnimator.SetTrigger("win");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(2);
     }
 }

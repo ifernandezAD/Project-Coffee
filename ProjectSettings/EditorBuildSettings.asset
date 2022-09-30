@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/CoffeScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Hot.unity
+    guid: e64bde35169f9e749b4de2853dcf29d3
+  - enabled: 1
+    path: Assets/Scenes/Perfect.unity
+    guid: 2c3a7f01ca49f2140ab6821808c04298
+  - enabled: 1
+    path: Assets/Scenes/Cold.unity
+    guid: ca928218337d32641a4b70db7b04fe71
   m_configObjects: {}

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 public class CoffeTemperature : MonoBehaviour
@@ -39,14 +41,13 @@ public class CoffeTemperature : MonoBehaviour
         myText.text = "Temperature: " + coffeeTemperature;
     }
 
-
     void TemperatureTest()
     {
         // If the coffee's temperature is greater than the hottest drinking temperature...
         if (coffeeTemperature > hotLimitTemperature)
         {
             // ... do this.
-            burning?.Invoke();
+            burning?.Invoke();          
             print("Coffee is too hot.");
 
         }
@@ -65,4 +66,5 @@ public class CoffeTemperature : MonoBehaviour
             print("Coffee is just right.");
         }
     }
+
 }
